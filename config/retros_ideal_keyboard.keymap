@@ -4,49 +4,207 @@
  * SPDX-License-Identifier: MIT
  */
 
- #include <behaviors.dtsi>
- #include <dt-bindings/zmk/keys.h>
- #include <dt-bindings/zmk/bt.h>
- #include <dt-bindings/zmk/rgb.h>
- #include <dt-bindings/zmk/ext_power.h>
- #include <dt-bindings/zmk/outputs.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
- #define DEFAULT 0
- #define LOWER  1
- #define RAISE  2
+#define DEFAULT 0
+#define LOWER  1
+#define RAISE  2
 
 / {
-       keymap {
-              compatible = "zmk,keymap";
+    combos {
+        compatible = "zmk,combos";
 
-              default_layer {
-                     bindings = <
-       &kp GRAVE  &kp N1  &kp N2   &kp N3   &kp N4                               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0
-       &kp TAB    &kp Q   &kp W    &kp E    &kp R                                &kp Y     &kp U     &kp I     &kp O      &kp P    
-       &kp LCTRL  &kp A   &kp S    &kp D    &kp F                                &kp H     &kp J     &kp K     &kp L      &kp SEMI 
-                          &kp X    &kp C    &kp V                                &kp M     &kp COMMA &kp PERIOD
-                                   &kp LGUI &kp LANG2                            &kp SPACE &mo RAISE
-                     >;
-              };
-              lower_layer {
-                     bindings = <
-       &kp GRAVE  &kp N1  &kp N2   &kp N3   &kp N4                               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0
-       &kp TAB    &kp Q   &kp W    &kp E    &kp R                                &kp Y     &kp U     &kp I     &kp O      &kp P    
-       &kp LCTRL  &kp A   &kp S    &kp D    &kp F                                &kp H     &kp J     &kp K     &kp L      &kp SEMI 
-                          &kp X    &kp C    &kp V                                &kp M     &kp COMMA &kp PERIOD
-                                   &kp LGUI &kp LANG2                            &kp SPACE &mo RAISE
+        switch_to_alpha {
+            bindings = <&to 0>;
+            key-positions = <34 6>;
+        };
 
-                     >;
-              };
-              raise_layer {
-                    bindings = <
-       &kp GRAVE  &kp N1  &kp N2   &kp N3   &kp N4                               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0
-       &kp TAB    &kp Q   &kp W    &kp E    &kp R                                &kp Y     &kp U     &kp I     &kp O      &kp P    
-       &kp LCTRL  &kp A   &kp S    &kp D    &kp F                                &kp H     &kp J     &kp K     &kp L      &kp SEMI 
-                          &kp X    &kp C    &kp V                                &kp M     &kp COMMA &kp PERIOD
-                                   &kp LGUI &kp LANG2                            &kp SPACE &mo RAISE
+        switch_to_symbol {
+            bindings = <&to 1>;
+            key-positions = <34 7>;
+        };
 
-                   >;
-              };
-       };
+        switch_to_system {
+            bindings = <&to 2>;
+            key-positions = <34 8>;
+        };
+    };
+
+    behaviors {
+        Period_Comma: Period_Comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PERIOD_COMMA";
+            bindings = <&kp PERIOD>, <&kp COMMA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Grave_Pipe: Grave_Pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_PIPE";
+            bindings = <&kp GRAVE>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Tilde_At: Tilde_At {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDE_AT";
+            bindings = <&kp TILDE>, <&kp AT_SIGN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Percent_Underscore: Percent_Underscore {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PERCENT_UNDERSCORE";
+            bindings = <&kp PERCENT>, <&kp UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Caret_LessThan: Caret_LessThan {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CARET_LESSTHAN";
+            bindings = <&kp CARET>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Plus_GreaterThan: Plus_GreaterThan {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_GREATERTHAN";
+            bindings = <&kp PLUS>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Minus_Exclamation: Minus_Exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_EXCLAMATION";
+            bindings = <&kp MINUS>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Dollar_Ampersand: Dollar_Ampersand {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOLLAR_AMPERSAND";
+            bindings = <&kp DOLLAR>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Backslash_OpenBracket: Backslash_OpenBracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSLASH_OPENBRACKET";
+            bindings = <&kp BACKSLASH>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Slash_CloseBracket: Slash_CloseBracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_CLOSEBRACKET";
+            bindings = <&kp SLASH>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        OpenParen_OpenCurly: OpenParen_OpenCurly {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OPENPAREN_OPENCURLY";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Asterisk_Equals: Asterisk_Equals {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ASTERISK_EQUALS";
+            bindings = <&kp ASTERISK>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        CloseParen_CloseCurly: CloseParen_CloseCurly {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CLOSEPAREN_CLOSECURLY";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        Hash_Colon: Hash_Colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HASH_COLON";
+            bindings = <&kp HASH>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        DoubleQuote_SingleQuote: DoubleQuote_SingleQuote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOUBLEQUOTE_SINGLEQUOTE";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        alpha_layer {
+            bindings = <
+&kp J  &kp G  &kp M          &kp P     &kp V          &kp Q          &kp LEFT        &kp DOWN   &kp UP  &kp RIGHT
+&kp C  &kp S  &kp N          &kp T     &kp K          &Period_Comma  &kp A           &kp E      &kp I   &kp H
+&kp X  &kp F  &kp L          &kp D     &kp W          &kp Z          &kp U           &kp O      &kp Y   &kp B
+              &kp BACKSPACE  &kp R     &key_repeat    &kp ENTER      &none           &kp SPACE
+                             &kp LGUI  &kp TAB        &kp LCTRL      &kp LEFT_SHIFT
+            >;
+
+            label = "Alpha";
+        };
+
+        symbol_layer {
+            bindings = <
+&Grave_Pipe        &Tilde_At               &Percent_Underscore  &Caret_LessThan       &Plus_GreaterThan    &Minus_Exclamation  &kp LEFT                &kp DOWN         &kp UP                    &kp RIGHT
+&Dollar_Ampersand  &Backslash_OpenBracket  &Slash_CloseBracket  &OpenParen_OpenCurly  &Asterisk_Equals     &Period_Comma       &CloseParen_CloseCurly  &Hash_Colon      &DoubleQuote_SingleQuote  &kp QUESTION
+&kp KP_NUMBER_9    &kp KP_NUMBER_8         &kp KP_NUMBER_7      &kp KP_NUMBER_6       &kp KP_NUMBER_5      &kp KP_NUMBER_0     &kp KP_NUMBER_1         &kp KP_NUMBER_2  &kp KP_NUMBER_3           &kp KP_NUMBER_4
+                                           &kp BACKSPACE        &kp SEMICOLON         &key_repeat          &kp ENTER           &none                   &kp SPACE
+                                                                &kp LGUI              &kp TAB              &kp LCTRL           &kp LEFT_SHIFT
+            >;
+
+            label = "Symbol";
+        };
+
+        system_layer {
+            bindings = <
+&kp J  &kp G  &kp M          &kp P     &kp V          &kp Q          &kp LEFT        &kp DOWN   &kp UP  &kp RIGHT
+&kp C  &kp S  &kp N          &kp T     &kp K          &Period_Comma  &kp A           &kp E      &kp I   &kp H
+&kp X  &kp F  &kp L          &kp D     &kp W          &kp Z          &kp U           &kp O      &kp Y   &kp B
+              &kp BACKSPACE  &kp R     &key_repeat    &kp ENTER      &none           &kp SPACE
+                             &kp LGUI  &kp TAB        &kp LCTRL      &kp LEFT_SHIFT
+            >;
+
+            label = "System";
+        };
+    };
 };
