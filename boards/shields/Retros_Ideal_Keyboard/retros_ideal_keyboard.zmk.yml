@@ -1,0 +1,11 @@
+file_format: "1"
+id: retros_ideal_keyboard
+name: Retros_Ideal_Keyboard
+type: shield
+url: https://github.com/RetroGaming22/zmk-config
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - retros_ideal_keyboard_left
+  - retros_ideal_keyboard_right
