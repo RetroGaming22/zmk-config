@@ -29,6 +29,56 @@
             bindings = <&to 2>;
             key-positions = <34 8>;
         };
+
+        switch_to_workspace1 {
+            bindings = <&kp LG(KP_NUMBER_1)>;
+            key-positions = <34 35 15>;
+        };
+
+        switch_to_workspace2 {
+            bindings = <&kp LG(KP_NUMBER_2)>;
+            key-positions = <34 35 16>;
+        };
+
+        switch_to_workspace3 {
+            bindings = <&kp LG(KP_NUMBER_3)>;
+            key-positions = <34 35 17>;
+        };
+
+        switch_to_workspace4 {
+            bindings = <&kp LG(KP_NUMBER_4)>;
+            key-positions = <34 35 18>;
+        };
+
+        switch_to_workspace5 {
+            bindings = <&kp LG(KP_NUMBER_5)>;
+            key-positions = <34 35 19>;
+        };
+
+        switch_to_workspace6 {
+            bindings = <&kp LG(KP_NUMBER_6)>;
+            key-positions = <34 35 14>;
+        };
+
+        switch_to_workspace7 {
+            bindings = <&kp LG(KP_NUMBER_7)>;
+            key-positions = <34 35 13>;
+        };
+
+        switch_to_workspace8 {
+            bindings = <&kp LG(KP_NUMBER_8)>;
+            key-positions = <34 35 12>;
+        };
+
+        switch_to_workspace9 {
+            bindings = <&kp LG(KP_NUMBER_9)>;
+            key-positions = <34 35 11>;
+        };
+
+        switch_to_workspace10 {
+            bindings = <&kp LG(KP_NUMBER_0)>;
+            key-positions = <34 35 10>;
+        };
     };
 
     behaviors {
@@ -197,11 +247,11 @@
 
         system_layer {
             bindings = <
-&kp J  &kp G  &kp M          &kp P     &kp V          &kp Q          &kp LEFT        &kp DOWN   &kp UP  &kp RIGHT
-&kp C  &kp S  &kp N          &kp T     &kp K          &Period_Comma  &kp A           &kp E      &kp I   &kp H
-&kp X  &kp F  &kp L          &kp D     &kp W          &kp Z          &kp U           &kp O      &kp Y   &kp B
-              &kp BACKSPACE  &kp R     &key_repeat    &kp ENTER      &none           &kp SPACE
-                             &kp LGUI  &kp TAB        &kp LCTRL      &kp LEFT_SHIFT
+&none  &none  &kp F9         &kp F8                &kp F7             &kp F1      &kp F2           &kp F3        &none         &none
+&none  &none  &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &kp PRINTSCREEN    &kp K_MUTE  &kp C_VOLUME_UP  &kp C_VOL_DN  &sk LEFT_ALT  &none
+&none  &none  &kp F12        &kp F11               &kp F10            &kp F4      &kp F5           &kp F6        &none         &none
+              &kp BACKSPACE  &kp ESCAPE            &key_repeat        &kp ENTER   &none            &kp SPACE
+                             &kp LGUI              &kp TAB            &kp LCTRL   &kp LEFT_SHIFT
             >;
 
             label = "System";
