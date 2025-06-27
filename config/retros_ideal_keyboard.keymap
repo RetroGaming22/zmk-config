@@ -79,6 +79,26 @@
             bindings = <&kp LG(KP_NUMBER_0)>;
             key-positions = <34 35 10>;
         };
+
+        Home {
+            bindings = <&kp HOME>;
+            key-positions = <38 36 6>;
+        };
+
+        PageDown {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <38 36 7>;
+        };
+
+        PageUp {
+            bindings = <&kp PG_UP>;
+            key-positions = <38 36 8>;
+        };
+
+        End {
+            bindings = <&kp END>;
+            key-positions = <38 36 9>;
+        };
     };
 
     behaviors {
