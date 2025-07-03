@@ -99,6 +99,83 @@
             bindings = <&kp END>;
             key-positions = <38 36 9>;
         };
+
+        switch_to_gaming {
+            bindings = <&to 3>;
+            key-positions = <34 9>;
+        };
+
+        gaming_F1 {
+            bindings = <&kp F1>;
+            key-positions = <20 16>;
+            layers = <3>;
+        };
+
+        gaming_F2 {
+            bindings = <&kp F2>;
+            key-positions = <20 17>;
+            layers = <3>;
+        };
+
+        gaming_F3 {
+            bindings = <&kp F3>;
+            key-positions = <20 18>;
+            layers = <3>;
+        };
+
+        gaming_F4 {
+            bindings = <&kp F4>;
+            key-positions = <20 19>;
+            layers = <3>;
+        };
+
+        gaming_F5 {
+            bindings = <&kp F5>;
+            key-positions = <20 25>;
+            layers = <3>;
+        };
+
+        gaming_F6 {
+            bindings = <&kp F6>;
+            key-positions = <20 26>;
+            layers = <3>;
+        };
+
+        gaming_F7 {
+            bindings = <&kp F7>;
+            key-positions = <20 27>;
+            layers = <3>;
+        };
+
+        gaming_F8 {
+            bindings = <&kp F8>;
+            key-positions = <20 28>;
+            layers = <3>;
+        };
+
+        gaming_F9 {
+            bindings = <&kp F9>;
+            key-positions = <20 29>;
+            layers = <3>;
+        };
+
+        gaming_F10 {
+            bindings = <&kp F10>;
+            key-positions = <20 15>;
+            layers = <3>;
+        };
+
+        gaming_F11 {
+            bindings = <&kp F11>;
+            key-positions = <20 5>;
+            layers = <3>;
+        };
+
+        gaming_F12 {
+            bindings = <&kp F12>;
+            key-positions = <20 6>;
+            layers = <3>;
+        };
     };
 
     behaviors {
@@ -275,6 +352,16 @@
             >;
 
             label = "System";
+        };
+
+        Gaming {
+            bindings = <
+&kp SLASH  &kp T  &kp LEFT_ARROW  &kp E      &kp DOWN       &kp GRAVE     &kp LEFT_ALT    &kp BACKSLASH  &kp UP_ARROW  &kp RIGHT
+&kp S      &kp A  &kp W           &kp D      &kp ESCAPE     &kp N0        &kp NUMBER_1    &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4
+&none      &kp B  &kp M           &kp F      &kp LCTRL      &kp NUMBER_5  &kp NUMBER_6    &kp N7         &kp NUMBER_8  &kp NUMBER_9
+                  &kp BACKSPACE   &kp SPACE  &key_repeat    &kp ENTER     &none           &kp SPACE
+                                  &kp LGUI   &kp TAB        &kp LCTRL     &kp LEFT_SHIFT
+            >;
         };
     };
 };
