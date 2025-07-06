@@ -1,6 +1,6 @@
 file_format: "1"
 id: retros_keyb
-name: Retros_Ideal_Keyboard
+name: Retros_Keyb
 type: shield
 url: https://github.com/RetroGaming22/zmk-config
 requires: [pro_micro]

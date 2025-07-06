@@ -1,0 +1,8 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_RETROS_KEYB_L
+    def_bool $(shields_list_contains,retros_keyb_l)
+
+config SHIELD_RETROS_KEYB_R
+    def_bool $(shields_list_contains,retros_keyb_r)

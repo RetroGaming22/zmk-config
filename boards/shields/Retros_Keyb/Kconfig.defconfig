@@ -1,17 +1,17 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_RETROS_IDEAL_KEYBOARD_LEFT
+if SHIELD_RETROS_KEYB_L
 
 config ZMK_KEYBOARD_NAME
-    default "Retros_Ideal_Keyboard"
+    default "Retros_Keyb"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_RETROS_IDEAL_KEYBOARD || SHIELD_RETROS_IDEAL_KEYBOARD
+if SHIELD_RETROS_KEYB || SHIELD_RETROS_KEYB
 
 config ZMK_SPLIT
     default y

@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: retros_ideal_keyboard_left
+    shield: retros_keyb_l
   - board: nice_nano_v2
-    shield: retros_ideal_keyboard_right
+    shield: retros_keyb_r
