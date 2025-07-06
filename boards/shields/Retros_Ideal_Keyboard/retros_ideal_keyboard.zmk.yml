@@ -1,5 +1,5 @@
 file_format: "1"
-id: retros_ideal_keyboard
+id: retros_keyb
 name: Retros_Ideal_Keyboard
 type: shield
 url: https://github.com/RetroGaming22/zmk-config
@@ -7,5 +7,5 @@ requires: [pro_micro]
 features:
   - keys
 siblings:
-  - retros_ideal_keyboard_left
-  - retros_ideal_keyboard_right
+  - retros_keyb_l
+  - retros_keyb_r
